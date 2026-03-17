@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Hanken+Grotesk:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 100 15% 97%;
+    --foreground: 0 0% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    --primary: 167 25% 16%;
+    --primary-foreground: 100 15% 97%;
+
+    --secondary: 165 14% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 100 10% 93%;
+    --muted-foreground: 165 10% 40%;
+
+    --accent: 41 48% 60%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 167 10% 88%;
+    --input: 167 10% 88%;
+    --ring: 167 25% 16%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 167 25% 6%;
+    --foreground: 100 15% 97%;
+    --card: 167 20% 10%;
+    --card-foreground: 100 15% 97%;
+    --popover: 167 20% 10%;
+    --popover-foreground: 100 15% 97%;
+    --primary: 100 15% 97%;
+    --primary-foreground: 167 25% 16%;
+    --secondary: 165 14% 30%;
+    --secondary-foreground: 100 15% 97%;
+    --muted: 167 15% 15%;
+    --muted-foreground: 165 10% 60%;
+    --accent: 41 48% 60%;
+    --accent-foreground: 0 0% 10%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 167 15% 20%;
+    --input: 167 15% 20%;
+    --ring: 100 15% 97%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .text-hero {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+  }
+
+  .text-section {
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  .shadow-premium {
+    box-shadow: 0 10px 15px -3px rgba(31, 51, 46, 0.05), 0 4px 6px -4px rgba(31, 51, 46, 0.05);
+  }
+
+  .shadow-premium-lg {
+    box-shadow: 0 20px 40px -8px rgba(31, 51, 46, 0.1), 0 8px 16px -4px rgba(31, 51, 46, 0.05);
+  }
+}
