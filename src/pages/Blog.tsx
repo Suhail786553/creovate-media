@@ -4,6 +4,15 @@ import { ArrowRight } from "lucide-react";
 import Layout from "@/components/Layout";
 import SectionWrapper from "@/components/SectionWrapper";
 
+const categoryImages = {
+  "SEO": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop&auto=format",
+  "Social Media": "https://images.unsplash.com/photo-1611262588024-d12430b98920?w=800&h=400&fit=crop&auto=format",
+  "Conversion": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop&auto=format",
+  "PPC": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=400&fit=crop&auto=format",
+  "Content": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=400&fit=crop&auto=format",
+  "Branding": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&h=400&fit=crop&auto=format"
+};
+
 const posts = [
   { title: "10 SEO Strategies That Actually Work in 2026", desc: "Discover the latest search optimization techniques that drive real organic growth and sustainable rankings.", category: "SEO", date: "Mar 10, 2026" },
   { title: "The Ultimate Guide to Social Media ROI", desc: "Learn how to measure and maximize returns from your social media marketing efforts across platforms.", category: "Social Media", date: "Mar 5, 2026" },
@@ -15,11 +24,11 @@ const posts = [
 
 const BlogPage = () => (
   <Layout>
-    <section className="pt-32 pb-20">
+    <section className="pt-32">
       <div className="container mx-auto px-6 text-center">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
           <span className="text-sm font-display font-semibold text-accent uppercase tracking-wider">Blog</span>
-          <h1 className="text-hero font-display font-semibold text-foreground mt-4">Marketing Insights</h1>
+          <h1 className="text-hero font-display font-display text-foreground mt-4">Marketing Insights</h1>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto mt-4">
             Actionable strategies and industry perspectives from our team.
           </p>
@@ -38,10 +47,18 @@ const BlogPage = () => (
             transition={{ delay: i * 0.06 }}
             className="group bg-card rounded-3xl overflow-hidden border border-primary/5 hover:shadow-premium-lg transition-all duration-500"
           >
-            <div className="h-48 bg-primary/5 flex items-center justify-center">
-              <span className="text-xs font-display font-semibold uppercase tracking-wider text-accent bg-accent/10 px-4 py-1.5 rounded-full">
-                {p.category}
-              </span>
+            <div className="h-48 relative overflow-hidden">
+              <img 
+                src={categoryImages[p.category as keyof typeof categoryImages]} 
+                alt={p.category}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+              <div className="absolute bottom-4 left-4">
+                <span className="text-xs font-display font-semibold uppercase tracking-wider text-white bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
+                  {p.category}
+                </span>
+              </div>
             </div>
             <div className="p-8">
               <div className="text-xs text-muted-foreground mb-3">{p.date}</div>

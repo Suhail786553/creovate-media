@@ -14,12 +14,12 @@ const Index = () => (
     <HeroSection />
     <ServicesSection />
     <WhyChooseSection />
-    <WhyDigitalSection />
+    {/* <WhyDigitalSection /> */}
     <ClientsSection />
     <TestimonialsSection />
     <BlogPreviewSection />
-    <FAQSection />
     <ContactSection />
+    <FAQSection />
   </Layout>
 );
 

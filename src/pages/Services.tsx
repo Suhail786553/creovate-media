@@ -60,7 +60,7 @@ const ServicesPage = () => (
       <div className="container mx-auto px-6 text-center">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
           <span className="text-sm font-display font-semibold text-accent uppercase tracking-wider">Our Expertise</span>
-          <h1 className="text-hero font-display font-semibold text-foreground mt-4 mb-6">
+          <h1 className="text-hero font-display font-display text-foreground mt-4 mb-6">
             Strategic Digital Solutions That Drive Growth
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">

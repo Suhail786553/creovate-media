@@ -1,25 +1,23 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Search, Share2, Target, Globe, Palette, FileText, ArrowRight } from "lucide-react";
+import { Share2, Target, Palette, Lightbulb, ArrowRight } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import SectionHeading from "@/components/SectionHeading";
 
 const services = [
-  { icon: Search, title: "Search Engine Optimization", desc: "Dominate search results with data-driven SEO strategies that drive organic traffic and conversions." },
-  { icon: Share2, title: "Social Media Marketing", desc: "Build engaged communities and amplify brand reach across all major social platforms." },
-  { icon: Target, title: "Google Ads / PPC Campaigns", desc: "Maximize ROI with precision-targeted paid advertising campaigns that convert." },
-  { icon: Globe, title: "Website Design & Development", desc: "Craft high-performance websites that captivate visitors and drive business growth." },
-  { icon: Palette, title: "Branding & Creative Design", desc: "Develop distinctive brand identities that resonate with your target audience." },
-  { icon: FileText, title: "Content Marketing", desc: "Create compelling content that educates, engages, and establishes thought leadership." },
+  { icon: Share2, title: "Digital Marketing", desc: "Comprehensive digital strategies including SMM, Influencer Marketing, SEO, and AEO to build your online presence." },
+  { icon: Target, title: "Lead Generation", desc: "Targeted campaigns with PPC Ads, Performance Marketing, and Engagement Ads to capture high-quality leads." },
+  { icon: Palette, title: "Designing", desc: "Creative solutions including Graphic Design, Video Creation, AI Designing, and UI/UX Design." },
+  { icon: Lightbulb, title: "Brand Building", desc: "Strategic brand development with Marketing Consultation and Website Development to establish your market position." },
 ];
 
 const ServicesSection = () => (
-  <SectionWrapper className="pb-32 md:pb-48">
+  <SectionWrapper className="">
     <SectionHeading
-      title="Our Digital Marketing Services"
-      subtitle="Comprehensive solutions architected for measurable growth."
+      title="Marketing Beyond Ordinary"
+      subtitle="Our Customized services for you."
     />
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       {services.map((s, i) => (
         <motion.div
           key={s.title}

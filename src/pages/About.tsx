@@ -24,7 +24,7 @@ const AboutPage = () => (
           className="max-w-4xl mx-auto text-center"
         >
           <span className="text-sm font-display font-semibold text-accent uppercase tracking-wider">About Creovate</span>
-          <h1 className="text-hero font-display font-semibold text-foreground mt-4 mb-6">
+          <h1 className="text-hero font-display font-display text-foreground mt-4 mb-6">
             We transform ambitious brands into digital leaders
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed mb-8">

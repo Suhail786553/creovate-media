@@ -23,16 +23,16 @@ const HeroSection = () => (
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease }}
           >
-            <span className="inline-block text-sm font-display font-semibold text-accent tracking-wider uppercase mb-6">
-              Digital Marketing Agency
+            <span className="inline-block text-xs font-display font-semibold text-accent tracking-wider uppercase mb-4">
+              CREOVATE MEDIA
             </span>
-            <h1 className="text-hero font-display font-semibold text-foreground mb-6">
-              Precision growth for the{" "}
-              <span className="text-secondary">digital-first</span> enterprise.
+            <h1 className="text-4xl lg:text-5xl font-display font-semibold text-foreground mb-5 leading-tight">
+              Running Ads Is Easy.<br />
+              But Are They{" "}
+              <span className="text-secondary">Actually</span> Building Your Business.
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-lg mb-10">
-              We help brands increase traffic, generate leads, and scale revenue through
-              powerful digital marketing strategies.
+            <p className="text-base text-muted-foreground leading-relaxed max-w-lg mb-8">
+             Turning Digital Campaigns into Real Results with Marketing Experience, Creativity and Right Technology !!
             </p>
             <div className="flex flex-wrap gap-4">
               <Link to="/contact">
