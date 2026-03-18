@@ -8,9 +8,12 @@ const stats = [
   { num: "5+", label: "Years Experience" },
 ];
 
-const logos = [
-  "Nexora", "Lumivault", "Streamline", "Bridgepoint", "Curatel",
-  "Synthetik", "Orbitflow", "Pressmark",
+const clients = [
+  { name: "Nexora", logo: "/partner.png" },
+  { name: "Lumivault", logo: "/partner1.png" },
+  { name: "Streamline", logo: "/partner2.png" },
+  { name: "Bridgepoint", logo: "/partner3.png" },
+  // { name: "proplyy", logo: "/partner4.png" },
 ];
 
 const ClientsSection = () => (
@@ -19,15 +22,20 @@ const ClientsSection = () => (
 
     {/* Logo carousel */}
     <div className="overflow-hidden mb-20 relative">
-      <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background/80 to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background/80 to-transparent z-10 pointer-events-none" />
-      <div className="flex animate-scroll-left whitespace-nowrap">
-        {[...logos, ...logos].map((name, i) => (
+      <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-transparent to-background-dark/80 z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-transparent to-background-dark/80 z-10 pointer-events-none" />
+
+      <div className="flex w-max animate-scroll-left">
+        {[...clients, ...clients].map((client, i) => (
           <div
             key={i}
-            className="inline-flex items-center justify-center px-12 py-6 text-xl font-display font-semibold text-muted-foreground/30 select-none"
+            className="inline-flex items-center justify-center px-12 py-6 flex-shrink-0"
           >
-            {name}
+            <img
+              src={client.logo}
+              alt={client.name}
+              className="h-28 w-54 object-contain opacity-80 hover:opacity-100 brightness-110 contrast-125 transition-all duration-300"
+            />
           </div>
         ))}
       </div>
