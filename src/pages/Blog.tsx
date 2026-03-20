@@ -5,21 +5,24 @@ import Layout from "@/components/Layout";
 import SectionWrapper from "@/components/SectionWrapper";
 
 const categoryImages = {
-  "SEO": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop&auto=format",
-  "Social Media": "https://images.unsplash.com/photo-1611262588024-d12430b98920?w=800&h=400&fit=crop&auto=format",
-  "Conversion": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop&auto=format",
-  "PPC": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=400&fit=crop&auto=format",
-  "Content": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=400&fit=crop&auto=format",
-  "Branding": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&h=400&fit=crop&auto=format"
-};
+  "Lead Generation": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop&auto=format",
 
+ "Social Media": "https://images.unsplash.com/photo-1562577309-2592ab84b1bc?auto=format&fit=crop&w=800&q=60",
+
+  "Conversion": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=60",
+
+  "PPC": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=60",
+
+  "Content": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=60",
+
+  "Branding": "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=800&q=60",
+};
 const posts = [
-  { title: "10 SEO Strategies That Actually Work in 2026", desc: "Discover the latest search optimization techniques that drive real organic growth and sustainable rankings.", category: "SEO", date: "Mar 10, 2026" },
-  { title: "The Ultimate Guide to Social Media ROI", desc: "Learn how to measure and maximize returns from your social media marketing efforts across platforms.", category: "Social Media", date: "Mar 5, 2026" },
-  { title: "Why Your Landing Pages Aren't Converting", desc: "Common conversion killers and data-backed fixes to boost your landing page performance immediately.", category: "Conversion", date: "Feb 28, 2026" },
-  { title: "PPC Budget Optimization: A Framework", desc: "How to allocate and optimize your paid advertising budget for maximum return on investment.", category: "PPC", date: "Feb 20, 2026" },
-  { title: "Building a Content Strategy From Scratch", desc: "A step-by-step guide to creating a content marketing strategy that drives traffic and builds authority.", category: "Content", date: "Feb 14, 2026" },
-  { title: "Brand Identity: More Than Just a Logo", desc: "Why comprehensive brand identity matters and how to build one that resonates with your audience.", category: "Branding", date: "Feb 8, 2026" },
+  { title: "Why Most Ads Don't Generate Leads (Even with Good Budget)", desc: "Running ads today is easier than ever, but many businesses still struggle to generate quality leads. Most campaigns focus on execution rather than strategy, leading to poor targeting and generic messaging.", category: "Social Media", date: "Mar 18, 2026" },
+  { title: "How to Generate Leads in Competitive Markets Like Lucknow", desc: "Competitive markets demand smarter marketing, not just higher budgets. Many businesses use similar creatives and targeting, making it hard to stand out. Local insights and differentiated creatives improve results.", category: "Lead Generation", date: "Mar 17, 2026" },
+  { title: "What Makes a High-Converting Ad Creative?", desc: "Creatives are the first interaction with your audience. Many designs look good but fail to communicate value. Clear messaging, strong hooks, relevance, and strong CTA drive conversions.", category: "Conversion", date: "Mar 16, 2026" },
+  { title: "Running Ads Isn't Enough — Here's What Actually Drives Sales", desc: "Ads alone do not guarantee sales. Strategy, positioning, and customer journey matter. Right offer, consistent optimization, and complete funnel deliver real growth.", category: "PPC", date: "Mar 15, 2026" },
+  { title: "How to Sell Event Tickets Using Instagram Ads", desc: "Event marketing requires creating urgency and excitement. Use hype, engagement, and conversion phases. Scarcity, early bird pricing, and retargeting improve ticket sales.", category: "Content", date: "Mar 14, 2026" },
 ];
 
 const BlogPage = () => (
@@ -48,8 +51,8 @@ const BlogPage = () => (
             className="group bg-card rounded-3xl overflow-hidden border border-primary/5 hover:shadow-premium-lg transition-all duration-500"
           >
             <div className="h-48 relative overflow-hidden">
-              <img 
-                src={categoryImages[p.category as keyof typeof categoryImages]} 
+              <img
+                src={categoryImages[p.category as keyof typeof categoryImages]}
                 alt={p.category}
                 className="w-full h-full object-cover"
               />
@@ -66,7 +69,17 @@ const BlogPage = () => (
                 {p.title}
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed mb-6">{p.desc}</p>
-              <Link to="#" className="inline-flex items-center gap-1 text-accent font-display font-medium text-sm group-hover:gap-2 transition-all">
+              <Link to={`/blog/${p.title.toLowerCase()
+                .replace(/[^a-z0-9\s-]/g, '')
+                .replace(/\s+/g, '-')
+                .replace(/-+/g, '-')
+                .trim()
+                .replace(/why-most-ads-dont-generate-leads-even-with-good-budget/, 'why-most-ads-dont-generate-leads')
+                .replace(/how-to-generate-leads-in-competitive-markets-like-lucknow/, 'generate-leads-competitive-markets')
+                .replace(/what-makes-a-high-converting-ad-creative/, 'high-converting-ad-creative')
+                .replace(/running-ads-isnt-enough-heres-what-actually-drives-sales/, 'running-ads-isnt-enough')
+                .replace(/how-to-sell-event-tickets-using-instagram-ads/, 'sell-event-tickets-instagram')
+              }`} className="inline-flex items-center gap-1 text-accent font-display font-medium text-sm group-hover:gap-2 transition-all">
                 Read More <ArrowRight size={14} />
               </Link>
             </div>

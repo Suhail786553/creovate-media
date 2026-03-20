@@ -6,19 +6,24 @@ import SectionHeading from "@/components/SectionHeading";
 
 const testimonials = [
   {
-    name: "Sarah Mitchell",
-    company: "Nexora Technologies",
-    review: "Creovate Media transformed our online presence. Within 6 months, our organic traffic increased by 180% and lead generation doubled.",
+    name: "Proplyy.in",
+    company: "Proplyy.in",
+    review: "Creovate Media helped us bring clarity to our marketing efforts. Their understanding of real estate marketing and buyer behavior really stood out. The creatives and campaigns were well thought out and aligned with our business goals. We saw better engagement and more relevant enquiries."
   },
   {
-    name: "James Chen",
-    company: "Bridgepoint Capital",
-    review: "Their data-driven approach to PPC delivered a 340% ROI. The team's expertise and transparent reporting make them an invaluable partner.",
+    name: "Levana Group",
+    company: "Levana Group",
+    review: "We took this service from Creovate in between our project and saw double number of walk-in clients and pre filtered clients. God Bless."
   },
   {
-    name: "Emily Rodriguez",
-    company: "Streamline Solutions",
-    review: "From social media strategy to website redesign, Creovate handled everything seamlessly. Our brand perception has never been stronger.",
+    name: "IP Palace Hotel",
+    company: "IP Palace Hotel",
+    review: "I contacted Creovate for Banquet Promotions and saw increased bookings for corporate and birthday parties every week."
+  },
+  {
+    name: "Opulense Interio",
+    company: "Opulense Interio",
+    review: "Professional, creative, and result-oriented. The team created high-quality creatives that truly reflected our brand identity. Their attention to detail and understanding of customer preferences helped us improve our overall digital presence."
   },
 ];
 

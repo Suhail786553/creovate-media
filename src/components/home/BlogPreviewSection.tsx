@@ -5,7 +5,7 @@ import SectionWrapper from "@/components/SectionWrapper";
 import SectionHeading from "@/components/SectionHeading";
 
 const categoryImages = {
-  "SEO": {
+  "Lead Generation": {
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop&auto=format",
     overlay: "from-blue-900/80 to-purple-900/80"
   },
@@ -21,18 +21,18 @@ const categoryImages = {
 
 const blogs = [
   {
-    title: "10 SEO Strategies That Actually Work in 2026",
-    desc: "Discover the latest search optimization techniques that drive real organic growth.",
-    category: "SEO",
+    title: "Why Most Ads Don't Generate Leads (Even with Good Budget)",
+    desc: "Running ads today is easier than ever, but many businesses still struggle to generate quality leads. Most campaigns focus on execution rather than strategy, leading to poor targeting and generic messaging.",
+    category: "Lead Generation",
   },
   {
-    title: "The Ultimate Guide to Social Media ROI",
-    desc: "Learn how to measure and maximize returns from your social media marketing efforts.",
+    title: "How to Generate Leads in Competitive Markets Like Lucknow",
+    desc: "Competitive markets demand smarter marketing, not just higher budgets. Many businesses use similar creatives and targeting, making it hard to stand out. Local insights and differentiated creatives improve results.",
     category: "Social Media",
   },
   {
-    title: "Why Your Landing Pages Aren't Converting",
-    desc: "Common conversion killers and data-backed fixes to boost your landing page performance.",
+    title: "What Makes a High-Converting Ad Creative?",
+    desc: "Creatives are the first interaction with your audience. Many designs look good but fail to communicate value. Clear messaging, strong hooks, relevance, and strong CTA drive conversions.",
     category: "Conversion",
   },
 ];
